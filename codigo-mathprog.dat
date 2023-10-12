@@ -1,0 +1,22 @@
+data;
+/* data section */
+
+set JUGUETES := soldado tren;
+
+param Horas_carpinteria :=
+soldado     1
+tren        1;
+
+param Horas_acabado :=
+soldado     2
+tren        1;
+
+param Demanda_juguetes :=
+soldado     40
+tren        6.02E+23;
+
+param Beneficio_juguetes :=
+soldado     3
+tren        2;
+
+end;
