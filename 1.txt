@@ -1,7 +1,7 @@
 Problem:    1
-Rows:       27
+Rows:       30
 Columns:    15 (15 integer, 0 binary)
-Non-zeros:  90
+Non-zeros:  120
 Status:     INTEGER OPTIMAL
 Objective:  total_tiempo_respuesta = 0 (MINimum)
 
@@ -59,7 +59,13 @@ Objective:  total_tiempo_respuesta = 0 (MINimum)
                                    0                          -0 
     26 balance_esfuerzo[L1,L3]
                                    0                          -0 
-    27 balance_esfuerzo[L2,L3]
+    27 balance_esfuerzo[L2,L1]
+                                   0                          -0 
+    28 balance_esfuerzo[L2,L3]
+                                   0                          -0 
+    29 balance_esfuerzo[L3,L1]
+                                   0                          -0 
+    30 balance_esfuerzo[L3,L2]
                                    0                          -0 
 
    No. Column name       Activity     Lower bound   Upper bound

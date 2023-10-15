@@ -28,7 +28,7 @@ s.t. max_llamadas{p in PARKINGS}: sum {d in DISTRICTS} ambulancias[p, d] <= 1000
 s.t. max_tiempo{d in DISTRICTS, p in PARKINGS}:  tiempo_respuesta[p, d] * ambulancias[p, d] <= max_tiempo_respuesta * ambulancias[p, d];
 
 # El número de ambulancias que se envían a un distrito no ha de ser un 50% más que el que se hace desde otro parking.
-s.t. balance_esfuerzo{p1 in PARKINGS, p2 in PARKINGS: p1 < p2}: sum {d in DISTRICTS} max_llamadas_por_distrito[d] * ambulancias[p1, d] <= 1.5 * sum {d in DISTRICTS} max_llamadas_por_distrito[d] * ambulancias[p2, d];
+s.t. balance_esfuerzo{p1 in PARKINGS, p2 in PARKINGS: p1 <> p2}: sum {d in DISTRICTS} ambulancias[p1, d] <= 1.5 * sum {d in DISTRICTS} ambulancias[p2, d];
 
 # Resuelve el modelo
 solve;
