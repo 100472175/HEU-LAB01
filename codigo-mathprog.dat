@@ -1,11 +1,41 @@
 data;
 /* data section */
 
-set JUGUETES := soldado tren;
+set Ambulancias := A11, A12, A13, A14, A15, A21, A22, A23, A24, A25, A31, A32, A33, A34, A35;
 
-param Horas_carpinteria :=
-soldado     1
-tren        1;
+param Tiempo_respuesta :=
+A11         20
+A12         30
+A13         50
+A14         15
+A15         32
+A21         15
+A22         18
+A23         30
+A24         12
+A25         15
+A31         34
+A32         20
+A33         14
+A34         30
+A35         18
+A41         12
+A42         15
+A43         40
+A44         10
+A45         20
+A51         20
+A52         18
+A53         20
+A54         17
+A55         10
+A61         55
+A62         35
+A63         20
+A64         30
+A65         30;
+
+
 
 param Horas_acabado :=
 soldado     2

@@ -1,0 +1,108 @@
+Problem:    1
+Rows:       27
+Columns:    15 (15 integer, 0 binary)
+Non-zeros:  90
+Status:     INTEGER OPTIMAL
+Objective:  total_tiempo_respuesta = 0 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 total_tiempo_respuesta
+                                   0                             
+     2 max_llamadas_en_distrito[D1]
+                                   0                        5000 
+     3 max_llamadas_en_distrito[D2]
+                                   0                        6500 
+     4 max_llamadas_en_distrito[D3]
+                                   0                        5400 
+     5 max_llamadas_en_distrito[D4]
+                                   0                        7500 
+     6 max_llamadas_en_distrito[D5]
+                                   0                        5500 
+     7 max_llamadas[L1]
+                                   0                       10000 
+     8 max_llamadas[L2]
+                                   0                       10000 
+     9 max_llamadas[L3]
+                                   0                       10000 
+    10 max_tiempo[D1,L1]
+                                   0                          -0 
+    11 max_tiempo[D1,L2]
+                                   0                          -0 
+    12 max_tiempo[D1,L3]
+                                   0                          -0 
+    13 max_tiempo[D2,L1]
+                                   0                          -0 
+    14 max_tiempo[D2,L2]
+                                   0                          -0 
+    15 max_tiempo[D2,L3]
+                                   0                          -0 
+    16 max_tiempo[D3,L1]
+                                   0                          -0 
+    17 max_tiempo[D3,L2]
+                                   0                          -0 
+    18 max_tiempo[D3,L3]
+                                   0                          -0 
+    19 max_tiempo[D4,L1]
+                                   0                          -0 
+    20 max_tiempo[D4,L2]
+                                   0                          -0 
+    21 max_tiempo[D4,L3]
+                                   0                          -0 
+    22 max_tiempo[D5,L1]
+                                   0                          -0 
+    23 max_tiempo[D5,L2]
+                                   0                          -0 
+    24 max_tiempo[D5,L3]
+                                   0                          -0 
+    25 balance_esfuerzo[L1,L2]
+                                   0                          -0 
+    26 balance_esfuerzo[L1,L3]
+                                   0                          -0 
+    27 balance_esfuerzo[L2,L3]
+                                   0                          -0 
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 ambulancias[L1,D1]
+                    *              0             0               
+     2 ambulancias[L1,D2]
+                    *              0             0               
+     3 ambulancias[L1,D3]
+                    *              0             0               
+     4 ambulancias[L1,D4]
+                    *              0             0               
+     5 ambulancias[L1,D5]
+                    *              0             0               
+     6 ambulancias[L2,D1]
+                    *              0             0               
+     7 ambulancias[L2,D2]
+                    *              0             0               
+     8 ambulancias[L2,D3]
+                    *              0             0               
+     9 ambulancias[L2,D4]
+                    *              0             0               
+    10 ambulancias[L2,D5]
+                    *              0             0               
+    11 ambulancias[L3,D1]
+                    *              0             0               
+    12 ambulancias[L3,D2]
+                    *              0             0               
+    13 ambulancias[L3,D3]
+                    *              0             0               
+    14 ambulancias[L3,D4]
+                    *              0             0               
+    15 ambulancias[L3,D5]
+                    *              0             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

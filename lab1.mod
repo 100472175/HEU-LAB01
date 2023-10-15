@@ -1,9 +1,9 @@
 # Programa copia del excel, pero en Mathprog
 
-set JUGUETES;
+set Ambulancias;
 
 /* parameters */
-param Horas_carpinteria {i in JUGUETES};
+param Tiempo_respuesta {i in JUGUETES};
 param Horas_acabado {i in JUGUETES};
 param Demanda_juguetes {i in JUGUETES};
 param Beneficio_juguetes {i in JUGUETES};
