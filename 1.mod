@@ -6,6 +6,7 @@ set PARKINGS;   # Conjunto de parkings
 param tiempo_respuesta{PARKINGS, DISTRICTS};    # Tiempo de respuesta por ambulancia
 param max_llamadas_parking;                     # Máximo número de llamadas por parking
 param max_tiempo_respuesta;                     # Máximo tiempo de respuesta
+param max_reparticiones;                        # Máximo número de llamadas por parking para distribuir
 param llamadas_por_distrito{d in DISTRICTS};    # Máximo número de llamadas por distrito (en total)
 
 # Variables de decisión
@@ -14,14 +15,18 @@ var ambulancias{p in PARKINGS, d in DISTRICTS} integer >= 0;   # Número de ambu
 # Función objetivo
 minimize total_tiempo_respuesta: sum {p in PARKINGS, d in DISTRICTS} tiempo_respuesta[p, d] * ambulancias[p, d];
 
+var z = 0;
 
 # Restricciones
 # La suma de las llamadas de cada distrito ha de ser menor al total de llamadas de ese distrito
 s.t. total_llamadas_en_distrito{d in DISTRICTS}: sum {p in PARKINGS} ambulancias[p,d] == llamadas_por_distrito[d];
 
-
 # No puede haber más de 10_000 llamadas en cada parking
-s.t. max_llamadas{p in PARKINGS}: sum {d in DISTRICTS} ambulancias[p, d] <= 10000;
+s.t. max_llamadas{p in PARKINGS}: sum {d in DISTRICTS} ambulancias[p, d] <= max_reparticiones;
+
+# Debe haber más de 10% de llamadas en cada parking
+s.t. llamadas_parking{d in DISTRICTS, p in PARKINGS: ambulancias[p, d] > zero}: ambulancias[p,d] >= llamadas_por_distrito[d] * 0.1;
+
 
 
 # El tiempo máximo que puede tardar una ambulancia en llegar a un distrito es de 35 minutos. Que es lo mismo que multiplicarlo por el número de ambulancias que se envían a ese distrito
