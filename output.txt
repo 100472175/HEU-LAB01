@@ -1,43 +1,56 @@
-Problem:    lab1
-Rows:       5
-Columns:    2
-Non-zeros:  8
-Status:     OPTIMAL
-Objective:  Beneficio_total = 180 (MAXimum)
+Problem:    1
+Rows:       9
+Columns:    15 (15 integer, 15 binary)
+Non-zeros:  45
+Status:     INTEGER EMPTY
+Objective:  tiempo_total = 0 (MINimum)
 
-   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
------- ------------ -- ------------- ------------- ------------- -------------
-     1 Beneficio_total
-                    B            180                             
-     2 carpinteria  NU            80                          80             1 
-     3 acabado      NU           100                         100             1 
-     4 demanda[soldado]
-                    B             20                          40 
-     5 demanda[tren]
-                    B             60                    6.02e+23 
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 tiempo_total                0                             
+     2 capacidad_por_parking[1]
+                                   0                           1 
+     3 capacidad_por_parking[2]
+                                   0                           1 
+     4 capacidad_por_parking[3]
+                                   0                           1 
+     5 demanda_por_distrito[1]
+                                   0          5000             = 
+     6 demanda_por_distrito[2]
+                                   0          6500             = 
+     7 demanda_por_distrito[3]
+                                   0          5400             = 
+     8 demanda_por_distrito[4]
+                                   0          7500             = 
+     9 demanda_por_distrito[5]
+                                   0          5500             = 
 
-   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
------- ------------ -- ------------- ------------- ------------- -------------
-     1 units[soldado]
-                    B             20             0               
-     2 units[tren]  B             60             0               
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 x[1,1]       *              0             0             1 
+     2 x[1,2]       *              0             0             1 
+     3 x[1,3]       *              0             0             1 
+     4 x[1,4]       *              0             0             1 
+     5 x[1,5]       *              0             0             1 
+     6 x[2,1]       *              0             0             1 
+     7 x[2,2]       *              0             0             1 
+     8 x[2,3]       *              0             0             1 
+     9 x[2,4]       *              0             0             1 
+    10 x[2,5]       *              0             0             1 
+    11 x[3,1]       *              0             0             1 
+    12 x[3,2]       *              0             0             1 
+    13 x[3,3]       *              0             0             1 
+    14 x[3,4]       *              0             0             1 
+    15 x[3,5]       *              0             0             1 
 
-Karush-Kuhn-Tucker optimality conditions:
+Integer feasibility conditions:
 
 KKT.PE: max.abs.err = 0.00e+00 on row 0
         max.rel.err = 0.00e+00 on row 0
         High quality
 
-KKT.PB: max.abs.err = 0.00e+00 on row 0
-        max.rel.err = 0.00e+00 on row 0
-        High quality
-
-KKT.DE: max.abs.err = 0.00e+00 on column 0
-        max.rel.err = 0.00e+00 on column 0
-        High quality
-
-KKT.DB: max.abs.err = 0.00e+00 on row 0
-        max.rel.err = 0.00e+00 on row 0
-        High quality
+KKT.PB: max.abs.err = 7.50e+03 on row 8
+        max.rel.err = 1.00e+00 on row 8
+        SOLUTION IS INFEASIBLE
 
 End of output
