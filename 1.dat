@@ -7,6 +7,10 @@ set DISTRICTS := D1 D2 D3 D4 D5;
 # Conjunto de parkings
 set PARKINGS := L1 L2 L3 L4 L5 L6;
 
+set POSIBLES_PARKINGS := L4 L5 L6;
+
+
+
 # Número de llamadas desde cada distrito
 param llamadas_por_distrito :=
     D1 5000
@@ -32,5 +36,8 @@ param max_reparticiones := 7500;
 
 # Máximo tiempo de respuesta
 param max_tiempo_respuesta := 35;
+
+param M := 100000;
+
 
 end;
