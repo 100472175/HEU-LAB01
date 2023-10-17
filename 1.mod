@@ -1,3 +1,11 @@
+#
+# Práctica 1: Programación Lineal - Heurística y Optimización
+#
+# Parte 2
+#
+# Eduardo Alarcón & Enrique Alcocer
+
+
 # Declaración de conjuntos
 set DISTRICTS;  # Conjunto de distritos
 set PARKINGS;   # Conjunto de parkings
@@ -16,7 +24,7 @@ param posibles_tiempo_respuesta{POSIBLES_PARKINGS, DISTRICTS};
 var ambulancias{p in PARKINGS, d in DISTRICTS} integer >= 0;   # Número de ambulancias que envía cada parking a cada distrito
 var ambulancias_binario{p in PARKINGS, d in DISTRICTS} binary;   # Número de ambulancias que envía cada parking a cada distrito
 var num_parking_nuevos integer >= 0;   # Número de parkings nuevos que se abren
-var parkings_posibles{p in POSIBLES_PARKINGS};
+var parkings_posibles{p in POSIBLES_PARKINGS} binary;
 
 # Función objetivo
 minimize total_tiempo_respuesta: sum {p in PARKINGS, d in DISTRICTS} tiempo_respuesta[p, d] * ambulancias[p, d] * 2 + sum{p in POSIBLES_PARKINGS} parkings_posibles[p] * 50000;
@@ -40,7 +48,7 @@ s.t. balance_esfuerzo{p1 in PARKINGS, p2 in PARKINGS: p1 <> p2}: sum {d in DISTR
 
 # Resuelve el modelo
 
-s.t. uso_parking{p in POSIBLES_PARKINGS}: sum {d in DISTRICTS}  ambulancias_binario[p, d] - parkings_posibles[p] == 0;
+s.t. uso_parking{p in POSIBLES_PARKINGS}: max {d in DISTRICTS}  ambulancias_binario[p, d] - parkings_posibles[p] == 0;
 
 
 
