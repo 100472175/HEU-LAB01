@@ -27,7 +27,8 @@ var num_parking_nuevos integer >= 0;   # Número de parkings nuevos que se abren
 var parkings_posibles{p in POSIBLES_PARKINGS} binary;
 
 # Función objetivo
-minimize total_tiempo_respuesta: sum {p in PARKINGS, d in DISTRICTS} tiempo_respuesta[p, d] * ambulancias[p, d] * 2 + sum{p in POSIBLES_PARKINGS} parkings_posibles[p] * 50000;
+minimize total_tiempo_respuesta: sum {p in PARKINGS, d in DISTRICTS} tiempo_respuesta[p, d] * ambulancias[p, d] * 2 +
+  sum{p in POSIBLES_PARKINGS} parkings_posibles[p] * 50000;
 
 
 # Restricciones
@@ -36,6 +37,10 @@ s.t. total_llamadas_en_distrito{d in DISTRICTS}: sum {p in PARKINGS} ambulancias
 
 # No puede haber más de 10_000 llamadas en cada parking
 s.t. max_llamadas{p in PARKINGS}: sum {d in DISTRICTS} ambulancias[p, d] <= max_reparticiones;
+
+s.t. binario_0{d in DISTRICTS, p in PARKINGS}: ambulancias[p,d] - M * ambulancias_binario[p, d] >= -M+llamadas_por_distrito[d] * 0.1;
+s.t. binario_1{d in DISTRICTS, p in PARKINGS}: ambulancias[p,d] - M * ambulancias_binario[p, d] <= 0;
+
 
 # Debe haber más de 10% de llamadas en cada parking
 s.t. llamadas_parking{d in DISTRICTS, p in PARKINGS}: ambulancias[p,d]  +  M*(1-ambulancias_binario[p, d]) >= llamadas_por_distrito[d] * 0.1;
@@ -46,10 +51,9 @@ s.t. max_tiempo{d in DISTRICTS, p in PARKINGS}:  tiempo_respuesta[p, d] * ambula
 # El número de ambulancias que se envían a un distrito no ha de ser un 50% más que el que se hace desde otro parking.
 s.t. balance_esfuerzo{p1 in PARKINGS, p2 in PARKINGS: p1 <> p2}: sum {d in DISTRICTS} ambulancias[p1, d] <= 1.5 * sum {d in DISTRICTS} ambulancias[p2, d];
 
-# Resuelve el modelo
-
-s.t. uso_parking{p in POSIBLES_PARKINGS}: max {d in DISTRICTS}  ambulancias_binario[p, d] - parkings_posibles[p] == 0;
-
+# Resuelve el model
+s.t. uso_parking{p in POSIBLES_PARKINGS}: sum{d in DISTRICTS} ambulancias_binario[p, d] -M*parkings_posibles[p] <= 0;
+s.t. uso_parking_min{p in POSIBLES_PARKINGS}: sum{d in DISTRICTS} ambulancias_binario[p, d] - M*parkings_posibles[p] >= -M+1;
 
 
 solve;
