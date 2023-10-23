@@ -24,7 +24,7 @@ param posibles_tiempo_respuesta{POSIBLES_PARKINGS, DISTRICTS};
 var ambulancias{p in PARKINGS, d in DISTRICTS} integer >= 0;   # Número de ambulancias que envía cada parking a cada distrito
 var ambulancias_binario{p in PARKINGS, d in DISTRICTS} binary;   # Número de ambulancias que envía cada parking a cada distrito
 var num_parking_nuevos integer >= 0;   # Número de parkings nuevos que se abren
-var parkings_posibles{p in POSIBLES_PARKINGS} binary;
+var parkings_posibles{p in PARKINGS} binary;
 
 # Función objetivo
 minimize total_tiempo_respuesta: sum {p in PARKINGS, d in DISTRICTS} tiempo_respuesta[p, d] * ambulancias[p, d] * 2 +
@@ -36,7 +36,7 @@ minimize total_tiempo_respuesta: sum {p in PARKINGS, d in DISTRICTS} tiempo_resp
 s.t. total_llamadas_en_distrito{d in DISTRICTS}: sum {p in PARKINGS} ambulancias[p,d] == llamadas_por_distrito[d];
 
 # No puede haber más de 10_000 llamadas en cada parking
-s.t. max_llamadas{p in PARKINGS}: sum {d in DISTRICTS} ambulancias[p, d] <= max_reparticiones;
+s.t. max_llamadas{p in PARKINGS}: sum {d in DISTRICTS} ambulancias[p, d] <= 0.75*max_llamadas_parking;
 
 s.t. binario_0{d in DISTRICTS, p in PARKINGS}: ambulancias[p,d] - M * ambulancias_binario[p, d] >= -M+llamadas_por_distrito[d] * 0.1;
 s.t. binario_1{d in DISTRICTS, p in PARKINGS}: ambulancias[p,d] - M * ambulancias_binario[p, d] <= 0;
@@ -49,11 +49,11 @@ s.t. llamadas_parking{d in DISTRICTS, p in PARKINGS}: ambulancias[p,d]  +  M*(1-
 s.t. max_tiempo{d in DISTRICTS, p in PARKINGS}:  tiempo_respuesta[p, d] * ambulancias[p, d] <= max_tiempo_respuesta * ambulancias[p, d];
 
 # El número de ambulancias que se envían a un distrito no ha de ser un 50% más que el que se hace desde otro parking.
-s.t. balance_esfuerzo{p1 in PARKINGS, p2 in PARKINGS: p1 <> p2}: sum {d in DISTRICTS} ambulancias[p1, d] <= 1.5 * sum {d in DISTRICTS} ambulancias[p2, d];
+s.t. balance_esfuerzo{p1 in PARKINGS, p2 in PARKINGS: p1 <> p2}: sum {d in DISTRICTS} ambulancias[p1, d] + M*(parkings_posibles[p1] - 1) <= 1.5 * sum {d in DISTRICTS} ambulancias[p2, d] + M*(1-parkings_posibles[p2]);
 
 # Resuelve el model
-s.t. uso_parking{p in POSIBLES_PARKINGS}: sum{d in DISTRICTS} ambulancias_binario[p, d] -M*parkings_posibles[p] <= 0;
-s.t. uso_parking_min{p in POSIBLES_PARKINGS}: sum{d in DISTRICTS} ambulancias_binario[p, d] - M*parkings_posibles[p] >= -M+1;
+s.t. uso_parking{p in PARKINGS}: sum{d in DISTRICTS} ambulancias_binario[p, d] -M*parkings_posibles[p] <= 0;
+s.t. uso_parking_min{p in PARKINGS}: sum{d in DISTRICTS} ambulancias_binario[p, d] - M*parkings_posibles[p] >= -M+1;
 
 
 solve;

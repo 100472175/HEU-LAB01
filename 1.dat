@@ -45,7 +45,7 @@ param max_reparticiones := 7500;
 # Máximo tiempo de respuesta
 param max_tiempo_respuesta := 35;
 
-param M := 1000000000000;
+param M := 50000;
 
 
 end;
