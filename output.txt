@@ -3,12 +3,12 @@ Rows:       174
 Columns:    66 (66 integer, 36 binary)
 Non-zeros:  734
 Status:     INTEGER OPTIMAL
-Objective:  total_tiempo_respuesta = 888200 (MINimum)
+Objective:  total_tiempo_respuesta = 888186 (MINimum)
 
    No.   Row name        Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
      1 total_tiempo_respuesta
-                              888200                             
+                              888186                             
      2 total_llamadas_en_distrito[D1]
                                 5000          5000             = 
      3 total_llamadas_en_distrito[D2]
@@ -20,17 +20,17 @@ Objective:  total_tiempo_respuesta = 888200 (MINimum)
      6 total_llamadas_en_distrito[D5]
                                 5500          5500             = 
      7 max_llamadas[L1]
-                                   0                        7500 
+                                   0                        7501 
      8 max_llamadas[L2]
-                                7500                        7500 
+                                7500                        7501 
      9 max_llamadas[L3]
-                                7400                        7500 
+                                7398                        7501 
     10 max_llamadas[L4]
-                                7500                        7500 
+                                7501                        7501 
     11 max_llamadas[L5]
-                                7500                        7500 
+                                7501                        7501 
     12 max_llamadas[L6]
-                                   0                        7500 
+                                   0                        7501 
     13 binario_0[D1,L1]
                                    0        -49500               
     14 binario_0[D1,L2]
@@ -48,11 +48,11 @@ Objective:  total_tiempo_respuesta = 888200 (MINimum)
     20 binario_0[D2,L2]
                                    0        -49350               
     21 binario_0[D2,L3]
-                              -48000        -49350               
+                              -48002        -49350               
     22 binario_0[D2,L4]
-                              -47500        -49350               
+                              -47499        -49350               
     23 binario_0[D2,L5]
-                              -48000        -49350               
+                              -47999        -49350               
     24 binario_0[D2,L6]
                                    0        -49350               
     25 binario_0[D3,L1]
@@ -108,11 +108,11 @@ Objective:  total_tiempo_respuesta = 888200 (MINimum)
     50 binario_1[D2,L2]
                                    0                          -0 
     51 binario_1[D2,L3]
-                              -48000                          -0 
+                              -48002                          -0 
     52 binario_1[D2,L4]
-                              -47500                          -0 
+                              -47499                          -0 
     53 binario_1[D2,L5]
-                              -48000                          -0 
+                              -47999                          -0 
     54 binario_1[D2,L6]
                                    0                          -0 
     55 binario_1[D3,L1]
@@ -168,11 +168,11 @@ Objective:  total_tiempo_respuesta = 888200 (MINimum)
     80 llamadas_parking[D2,L2]
                                    0        -49350               
     81 llamadas_parking[D2,L3]
-                              -48000        -49350               
+                              -48002        -49350               
     82 llamadas_parking[D2,L4]
-                              -47500        -49350               
+                              -47499        -49350               
     83 llamadas_parking[D2,L5]
-                              -48000        -49350               
+                              -47999        -49350               
     84 llamadas_parking[D2,L6]
                                    0        -49350               
     85 llamadas_parking[D3,L1]
@@ -228,11 +228,11 @@ Objective:  total_tiempo_respuesta = 888200 (MINimum)
    110 max_tiempo[D2,L2]
                                    0                          -0 
    111 max_tiempo[D2,L3]
-                              -30000                          -0 
+                              -29970                          -0 
    112 max_tiempo[D2,L4]
-                              -50000                          -0 
+                              -50020                          -0 
    113 max_tiempo[D2,L5]
-                              -34000                          -0 
+                              -34017                          -0 
    114 max_tiempo[D2,L6]
                                    0                          -0 
    115 max_tiempo[D3,L1]
@@ -274,63 +274,63 @@ Objective:  total_tiempo_respuesta = 888200 (MINimum)
    133 balance_esfuerzo[L1,L2]
                                38750                      100000 
    134 balance_esfuerzo[L1,L3]
-                               38900                      100000 
+                               38903                      100000 
    135 balance_esfuerzo[L1,L4]
-                               38750                      100000 
+                             38748.5                      100000 
    136 balance_esfuerzo[L1,L5]
-                               38750                      100000 
+                             38748.5                      100000 
    137 balance_esfuerzo[L1,L6]
                                    0                      100000 
    138 balance_esfuerzo[L2,L1]
                                57500                      100000 
    139 balance_esfuerzo[L2,L3]
-                               96400                      100000 
+                               96403                      100000 
    140 balance_esfuerzo[L2,L4]
-                               96250                      100000 
+                             96248.5                      100000 
    141 balance_esfuerzo[L2,L5]
-                               96250                      100000 
+                             96248.5                      100000 
    142 balance_esfuerzo[L2,L6]
                                57500                      100000 
    143 balance_esfuerzo[L3,L1]
-                               57400                      100000 
+                               57398                      100000 
    144 balance_esfuerzo[L3,L2]
-                               96150                      100000 
+                               96148                      100000 
    145 balance_esfuerzo[L3,L4]
-                               96150                      100000 
+                             96146.5                      100000 
    146 balance_esfuerzo[L3,L5]
-                               96150                      100000 
+                             96146.5                      100000 
    147 balance_esfuerzo[L3,L6]
-                               57400                      100000 
+                               57398                      100000 
    148 balance_esfuerzo[L4,L1]
-                               57500                      100000 
+                               57501                      100000 
    149 balance_esfuerzo[L4,L2]
-                               96250                      100000 
+                               96251                      100000 
    150 balance_esfuerzo[L4,L3]
-                               96400                      100000 
+                               96404                      100000 
    151 balance_esfuerzo[L4,L5]
-                               96250                      100000 
+                             96249.5                      100000 
    152 balance_esfuerzo[L4,L6]
-                               57500                      100000 
+                               57501                      100000 
    153 balance_esfuerzo[L5,L1]
-                               57500                      100000 
+                               57501                      100000 
    154 balance_esfuerzo[L5,L2]
-                               96250                      100000 
+                               96251                      100000 
    155 balance_esfuerzo[L5,L3]
-                               96400                      100000 
+                               96404                      100000 
    156 balance_esfuerzo[L5,L4]
-                               96250                      100000 
+                             96249.5                      100000 
    157 balance_esfuerzo[L5,L6]
-                               57500                      100000 
+                               57501                      100000 
    158 balance_esfuerzo[L6,L1]
                                    0                      100000 
    159 balance_esfuerzo[L6,L2]
                                38750                      100000 
    160 balance_esfuerzo[L6,L3]
-                               38900                      100000 
+                               38903                      100000 
    161 balance_esfuerzo[L6,L4]
-                               38750                      100000 
+                             38748.5                      100000 
    162 balance_esfuerzo[L6,L5]
-                               38750                      100000 
+                             38748.5                      100000 
    163 uso_parking[L1]
                                    0                          -0 
    164 uso_parking[L2]
@@ -381,7 +381,7 @@ Objective:  total_tiempo_respuesta = 888200 (MINimum)
     11 ambulancias[L3,D1]
                     *              0             0               
     12 ambulancias[L3,D2]
-                    *           2000             0               
+                    *           1998             0               
     13 ambulancias[L3,D3]
                     *           5400             0               
     14 ambulancias[L3,D4]
@@ -391,7 +391,7 @@ Objective:  total_tiempo_respuesta = 888200 (MINimum)
     16 ambulancias[L4,D1]
                     *           5000             0               
     17 ambulancias[L4,D2]
-                    *           2500             0               
+                    *           2501             0               
     18 ambulancias[L4,D3]
                     *              0             0               
     19 ambulancias[L4,D4]
@@ -401,7 +401,7 @@ Objective:  total_tiempo_respuesta = 888200 (MINimum)
     21 ambulancias[L5,D1]
                     *              0             0               
     22 ambulancias[L5,D2]
-                    *           2000             0               
+                    *           2001             0               
     23 ambulancias[L5,D3]
                     *              0             0               
     24 ambulancias[L5,D4]

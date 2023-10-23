@@ -35,15 +35,16 @@ minimize total_tiempo_respuesta: sum {p in PARKINGS, d in DISTRICTS} tiempo_resp
 # La suma de las llamadas de cada distrito ha de ser menor al total de llamadas de ese distrito
 s.t. total_llamadas_en_distrito{d in DISTRICTS}: sum {p in PARKINGS} ambulancias[p,d] == llamadas_por_distrito[d];
 
-# No puede haber más de 10_000 llamadas en cada parking
-s.t. max_llamadas{p in PARKINGS}: sum {d in DISTRICTS} ambulancias[p, d] <= 0.75*max_llamadas_parking;
+# No puede haber más de 10_000*0.75 llamadas en cada parking
+s.t. max_llamadas{p in PARKINGS}: sum {d in DISTRICTS} ambulancias[p, d] <= 0.75*max_llamadas_parking-1;
 
+# Restricción de variables binarias para que se cumpla que si se envían ambulancias a un distrito, se envían al menos 10% de las llamadas
 s.t. binario_0{d in DISTRICTS, p in PARKINGS}: ambulancias[p,d] - M * ambulancias_binario[p, d] >= -M+llamadas_por_distrito[d] * 0.1;
 s.t. binario_1{d in DISTRICTS, p in PARKINGS}: ambulancias[p,d] - M * ambulancias_binario[p, d] <= 0;
 
 
 # Debe haber más de 10% de llamadas en cada parking
-s.t. llamadas_parking{d in DISTRICTS, p in PARKINGS}: ambulancias[p,d]  +  M*(1-ambulancias_binario[p, d]) >= llamadas_por_distrito[d] * 0.1;
+s.t. llamadas_parking{d in DISTRICTS, p in PARKINGS}: ambulancias[p,d] + M*(1-ambulancias_binario[p, d]) >= llamadas_por_distrito[d] * 0.1;
 
 # El tiempo máximo que puede tardar una ambulancia en llegar a un distrito es de 35 minutos. Que es lo mismo que multiplicarlo por el número de ambulancias que se envían a ese distrito
 s.t. max_tiempo{d in DISTRICTS, p in PARKINGS}:  tiempo_respuesta[p, d] * ambulancias[p, d] <= max_tiempo_respuesta * ambulancias[p, d];
