@@ -1,14 +1,14 @@
 Problem:    1
-Rows:       174
+Rows:       204
 Columns:    66 (66 integer, 36 binary)
-Non-zeros:  734
+Non-zeros:  764
 Status:     INTEGER OPTIMAL
-Objective:  total_tiempo_respuesta = 889718 (MINimum)
+Objective:  total_tiempo_respuesta = 872030 (MINimum)
 
    No.   Row name        Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
      1 total_tiempo_respuesta
-                              889718                             
+                              872030                             
      2 total_llamadas_en_distrito[D1]
                                 5000          5000             = 
      3 total_llamadas_en_distrito[D2]
@@ -19,342 +19,402 @@ Objective:  total_tiempo_respuesta = 889718 (MINimum)
                                 7500          7500             = 
      6 total_llamadas_en_distrito[D5]
                                 5500          5500             = 
-     7 max_llamadas[L1]
+     7 max_llamadas[L1,D1]
                                    0                        7499 
-     8 max_llamadas[L2]
-                                7499                        7499 
-     9 max_llamadas[L3]
-                                7403                        7499 
-    10 max_llamadas[L4]
-                                7499                        7499 
-    11 max_llamadas[L5]
-                                7499                        7499 
-    12 max_llamadas[L6]
+     8 max_llamadas[L1,D2]
                                    0                        7499 
-    13 binario_0[D1,L1]
+     9 max_llamadas[L1,D3]
+                                   0                        7499 
+    10 max_llamadas[L1,D4]
+                                   0                        7499 
+    11 max_llamadas[L1,D5]
+                                   0                        7499 
+    12 max_llamadas[L2,D1]
+                                   0                        7499 
+    13 max_llamadas[L2,D2]
+                                   0                        7499 
+    14 max_llamadas[L2,D3]
+                                   0                        7499 
+    15 max_llamadas[L2,D4]
+                                6750                        7499 
+    16 max_llamadas[L2,D5]
+                                   0                        7499 
+    17 max_llamadas[L3,D1]
+                                   0                        7499 
+    18 max_llamadas[L3,D2]
+                                1214                        7499 
+    19 max_llamadas[L3,D3]
+                                5400                        7499 
+    20 max_llamadas[L3,D4]
+                                   0                        7499 
+    21 max_llamadas[L3,D5]
+                                   0                        7499 
+    22 max_llamadas[L4,D1]
+                                5000                        7499 
+    23 max_llamadas[L4,D2]
+                                4171                        7499 
+    24 max_llamadas[L4,D3]
+                                   0                        7499 
+    25 max_llamadas[L4,D4]
+                                 750                        7499 
+    26 max_llamadas[L4,D5]
+                                   0                        7499 
+    27 max_llamadas[L5,D1]
+                                   0                        7499 
+    28 max_llamadas[L5,D2]
+                                1115                        7499 
+    29 max_llamadas[L5,D3]
+                                   0                        7499 
+    30 max_llamadas[L5,D4]
+                                   0                        7499 
+    31 max_llamadas[L5,D5]
+                                5500                        7499 
+    32 max_llamadas[L6,D1]
+                                   0                        7499 
+    33 max_llamadas[L6,D2]
+                                   0                        7499 
+    34 max_llamadas[L6,D3]
+                                   0                        7499 
+    35 max_llamadas[L6,D4]
+                                   0                        7499 
+    36 max_llamadas[L6,D5]
+                                   0                        7499 
+    37 max_llamadas_10k[L1]
+                                   0                       10000 
+    38 max_llamadas_10k[L2]
+                                6750                       10000 
+    39 max_llamadas_10k[L3]
+                                6614                       10000 
+    40 max_llamadas_10k[L4]
+                                9921                       10000 
+    41 max_llamadas_10k[L5]
+                                6615                       10000 
+    42 max_llamadas_10k[L6]
+                                   0                       10000 
+    43 binario_0[L1,D1]
+                                   0            -0               
+    44 binario_0[L1,D2]
+                                   0            -0               
+    45 binario_0[L1,D3]
+                                   0            -0               
+    46 binario_0[L1,D4]
+                                   0            -0               
+    47 binario_0[L1,D5]
+                                   0            -0               
+    48 binario_0[L2,D1]
+                                   0            -0               
+    49 binario_0[L2,D2]
+                                   0            -0               
+    50 binario_0[L2,D3]
+                                   0            -0               
+    51 binario_0[L2,D4]
+                                6749            -0               
+    52 binario_0[L2,D5]
+                                   0            -0               
+    53 binario_0[L3,D1]
+                                   0            -0               
+    54 binario_0[L3,D2]
+                                1213            -0               
+    55 binario_0[L3,D3]
+                                5399            -0               
+    56 binario_0[L3,D4]
+                                   0            -0               
+    57 binario_0[L3,D5]
+                                   0            -0               
+    58 binario_0[L4,D1]
+                                4999            -0               
+    59 binario_0[L4,D2]
+                                4170            -0               
+    60 binario_0[L4,D3]
+                                   0            -0               
+    61 binario_0[L4,D4]
+                                 749            -0               
+    62 binario_0[L4,D5]
+                                   0            -0               
+    63 binario_0[L5,D1]
+                                   0            -0               
+    64 binario_0[L5,D2]
+                                1114            -0               
+    65 binario_0[L5,D3]
+                                   0            -0               
+    66 binario_0[L5,D4]
+                                   0            -0               
+    67 binario_0[L5,D5]
+                                5499            -0               
+    68 binario_0[L6,D1]
+                                   0            -0               
+    69 binario_0[L6,D2]
+                                   0            -0               
+    70 binario_0[L6,D3]
+                                   0            -0               
+    71 binario_0[L6,D4]
+                                   0            -0               
+    72 binario_0[L6,D5]
+                                   0            -0               
+    73 binario_1[L1,D1]
+                                   0            -0               
+    74 binario_1[L1,D2]
+                                   0            -0               
+    75 binario_1[L1,D3]
+                                   0            -0               
+    76 binario_1[L1,D4]
+                                   0            -0               
+    77 binario_1[L1,D5]
+                                   0            -0               
+    78 binario_1[L2,D1]
+                                   0            -0               
+    79 binario_1[L2,D2]
+                                   0            -0               
+    80 binario_1[L2,D3]
+                                   0            -0               
+    81 binario_1[L2,D4]
+                               43250            -0               
+    82 binario_1[L2,D5]
+                                   0            -0               
+    83 binario_1[L3,D1]
+                                   0            -0               
+    84 binario_1[L3,D2]
+                               48786            -0               
+    85 binario_1[L3,D3]
+                               44600            -0               
+    86 binario_1[L3,D4]
+                                   0            -0               
+    87 binario_1[L3,D5]
+                                   0            -0               
+    88 binario_1[L4,D1]
+                               45000            -0               
+    89 binario_1[L4,D2]
+                               45829            -0               
+    90 binario_1[L4,D3]
+                                   0            -0               
+    91 binario_1[L4,D4]
+                               49250            -0               
+    92 binario_1[L4,D5]
+                                   0            -0               
+    93 binario_1[L5,D1]
+                                   0            -0               
+    94 binario_1[L5,D2]
+                               48885            -0               
+    95 binario_1[L5,D3]
+                                   0            -0               
+    96 binario_1[L5,D4]
+                                   0            -0               
+    97 binario_1[L5,D5]
+                               44500            -0               
+    98 binario_1[L6,D1]
+                                   0            -0               
+    99 binario_1[L6,D2]
+                                   0            -0               
+   100 binario_1[L6,D3]
+                                   0            -0               
+   101 binario_1[L6,D4]
+                                   0            -0               
+   102 binario_1[L6,D5]
+                                   0            -0               
+   103 se_usa[L1,D1]
                                    0        -49500               
-    14 binario_0[D1,L2]
-                                   0        -49500               
-    15 binario_0[D1,L3]
-                                   0        -49500               
-    16 binario_0[D1,L4]
-                              -45000        -49500               
-    17 binario_0[D1,L5]
-                                   0        -49500               
-    18 binario_0[D1,L6]
-                                   0        -49500               
-    19 binario_0[D2,L1]
+   104 se_usa[L1,D2]
                                    0        -49350               
-    20 binario_0[D2,L2]
-                              -49251        -49350               
-    21 binario_0[D2,L3]
-                              -47997        -49350               
-    22 binario_0[D2,L4]
-                              -48251        -49350               
-    23 binario_0[D2,L5]
-                              -48001        -49350               
-    24 binario_0[D2,L6]
-                                   0        -49350               
-    25 binario_0[D3,L1]
+   105 se_usa[L1,D3]
                                    0        -49460               
-    26 binario_0[D3,L2]
-                                   0        -49460               
-    27 binario_0[D3,L3]
-                              -44600        -49460               
-    28 binario_0[D3,L4]
-                                   0        -49460               
-    29 binario_0[D3,L5]
-                                   0        -49460               
-    30 binario_0[D3,L6]
-                                   0        -49460               
-    31 binario_0[D4,L1]
+   106 se_usa[L1,D4]
                                    0        -49250               
-    32 binario_0[D4,L2]
+   107 se_usa[L1,D5]
+                                   0        -49450               
+   108 se_usa[L2,D1]
+                                   0        -49500               
+   109 se_usa[L2,D2]
+                                   0        -49350               
+   110 se_usa[L2,D3]
+                                   0        -49460               
+   111 se_usa[L2,D4]
                               -43250        -49250               
-    33 binario_0[D4,L3]
-                                   0        -49250               
-    34 binario_0[D4,L4]
-                              -49250        -49250               
-    35 binario_0[D4,L5]
-                                   0        -49250               
-    36 binario_0[D4,L6]
-                                   0        -49250               
-    37 binario_0[D5,L1]
+   112 se_usa[L2,D5]
                                    0        -49450               
-    38 binario_0[D5,L2]
-                                   0        -49450               
-    39 binario_0[D5,L3]
-                                   0        -49450               
-    40 binario_0[D5,L4]
-                                   0        -49450               
-    41 binario_0[D5,L5]
-                              -44500        -49450               
-    42 binario_0[D5,L6]
-                                   0        -49450               
-    43 binario_1[D1,L1]
-                                   0                          -0 
-    44 binario_1[D1,L2]
-                                   0                          -0 
-    45 binario_1[D1,L3]
-                                   0                          -0 
-    46 binario_1[D1,L4]
-                              -45000                          -0 
-    47 binario_1[D1,L5]
-                                   0                          -0 
-    48 binario_1[D1,L6]
-                                   0                          -0 
-    49 binario_1[D2,L1]
-                                   0                          -0 
-    50 binario_1[D2,L2]
-                              -49251                          -0 
-    51 binario_1[D2,L3]
-                              -47997                          -0 
-    52 binario_1[D2,L4]
-                              -48251                          -0 
-    53 binario_1[D2,L5]
-                              -48001                          -0 
-    54 binario_1[D2,L6]
-                                   0                          -0 
-    55 binario_1[D3,L1]
-                                   0                          -0 
-    56 binario_1[D3,L2]
-                                   0                          -0 
-    57 binario_1[D3,L3]
-                              -44600                          -0 
-    58 binario_1[D3,L4]
-                                   0                          -0 
-    59 binario_1[D3,L5]
-                                   0                          -0 
-    60 binario_1[D3,L6]
-                                   0                          -0 
-    61 binario_1[D4,L1]
-                                   0                          -0 
-    62 binario_1[D4,L2]
-                              -43250                          -0 
-    63 binario_1[D4,L3]
-                                   0                          -0 
-    64 binario_1[D4,L4]
-                              -49250                          -0 
-    65 binario_1[D4,L5]
-                                   0                          -0 
-    66 binario_1[D4,L6]
-                                   0                          -0 
-    67 binario_1[D5,L1]
-                                   0                          -0 
-    68 binario_1[D5,L2]
-                                   0                          -0 
-    69 binario_1[D5,L3]
-                                   0                          -0 
-    70 binario_1[D5,L4]
-                                   0                          -0 
-    71 binario_1[D5,L5]
-                              -44500                          -0 
-    72 binario_1[D5,L6]
-                                   0                          -0 
-    73 llamadas_parking[D1,L1]
+   113 se_usa[L3,D1]
                                    0        -49500               
-    74 llamadas_parking[D1,L2]
-                                   0        -49500               
-    75 llamadas_parking[D1,L3]
-                                   0        -49500               
-    76 llamadas_parking[D1,L4]
-                              -45000        -49500               
-    77 llamadas_parking[D1,L5]
-                                   0        -49500               
-    78 llamadas_parking[D1,L6]
-                                   0        -49500               
-    79 llamadas_parking[D2,L1]
-                                   0        -49350               
-    80 llamadas_parking[D2,L2]
-                              -49251        -49350               
-    81 llamadas_parking[D2,L3]
-                              -47997        -49350               
-    82 llamadas_parking[D2,L4]
-                              -48251        -49350               
-    83 llamadas_parking[D2,L5]
-                              -48001        -49350               
-    84 llamadas_parking[D2,L6]
-                                   0        -49350               
-    85 llamadas_parking[D3,L1]
-                                   0        -49460               
-    86 llamadas_parking[D3,L2]
-                                   0        -49460               
-    87 llamadas_parking[D3,L3]
+   114 se_usa[L3,D2]
+                              -48786        -49350               
+   115 se_usa[L3,D3]
                               -44600        -49460               
-    88 llamadas_parking[D3,L4]
-                                   0        -49460               
-    89 llamadas_parking[D3,L5]
-                                   0        -49460               
-    90 llamadas_parking[D3,L6]
-                                   0        -49460               
-    91 llamadas_parking[D4,L1]
+   116 se_usa[L3,D4]
                                    0        -49250               
-    92 llamadas_parking[D4,L2]
-                              -43250        -49250               
-    93 llamadas_parking[D4,L3]
-                                   0        -49250               
-    94 llamadas_parking[D4,L4]
+   117 se_usa[L3,D5]
+                                   0        -49450               
+   118 se_usa[L4,D1]
+                              -45000        -49500               
+   119 se_usa[L4,D2]
+                              -45829        -49350               
+   120 se_usa[L4,D3]
+                                   0        -49460               
+   121 se_usa[L4,D4]
                               -49250        -49250               
-    95 llamadas_parking[D4,L5]
+   122 se_usa[L4,D5]
+                                   0        -49450               
+   123 se_usa[L5,D1]
+                                   0        -49500               
+   124 se_usa[L5,D2]
+                              -48885        -49350               
+   125 se_usa[L5,D3]
+                                   0        -49460               
+   126 se_usa[L5,D4]
                                    0        -49250               
-    96 llamadas_parking[D4,L6]
-                                   0        -49250               
-    97 llamadas_parking[D5,L1]
-                                   0        -49450               
-    98 llamadas_parking[D5,L2]
-                                   0        -49450               
-    99 llamadas_parking[D5,L3]
-                                   0        -49450               
-   100 llamadas_parking[D5,L4]
-                                   0        -49450               
-   101 llamadas_parking[D5,L5]
+   127 se_usa[L5,D5]
                               -44500        -49450               
-   102 llamadas_parking[D5,L6]
+   128 se_usa[L6,D1]
+                                   0        -49500               
+   129 se_usa[L6,D2]
+                                   0        -49350               
+   130 se_usa[L6,D3]
+                                   0        -49460               
+   131 se_usa[L6,D4]
+                                   0        -49250               
+   132 se_usa[L6,D5]
                                    0        -49450               
-   103 max_tiempo[D1,L1]
+   133 max_tiempo[D1,L1]
                                    0                          -0 
-   104 max_tiempo[D1,L2]
+   134 max_tiempo[D1,L2]
                                    0                          -0 
-   105 max_tiempo[D1,L3]
+   135 max_tiempo[D1,L3]
                                    0                          -0 
-   106 max_tiempo[D1,L4]
+   136 max_tiempo[D1,L4]
                              -115000                          -0 
-   107 max_tiempo[D1,L5]
+   137 max_tiempo[D1,L5]
                                    0                          -0 
-   108 max_tiempo[D1,L6]
+   138 max_tiempo[D1,L6]
                                    0                          -0 
-   109 max_tiempo[D2,L1]
+   139 max_tiempo[D2,L1]
                                    0                          -0 
-   110 max_tiempo[D2,L2]
-                              -12733                          -0 
-   111 max_tiempo[D2,L3]
-                              -30045                          -0 
-   112 max_tiempo[D2,L4]
-                              -34980                          -0 
-   113 max_tiempo[D2,L5]
-                              -33983                          -0 
-   114 max_tiempo[D2,L6]
+   140 max_tiempo[D2,L2]
                                    0                          -0 
-   115 max_tiempo[D3,L1]
+   141 max_tiempo[D2,L3]
+                              -18210                          -0 
+   142 max_tiempo[D2,L4]
+                              -83420                          -0 
+   143 max_tiempo[D2,L5]
+                              -18955                          -0 
+   144 max_tiempo[D2,L6]
                                    0                          -0 
-   116 max_tiempo[D3,L2]
+   145 max_tiempo[D3,L1]
                                    0                          -0 
-   117 max_tiempo[D3,L3]
+   146 max_tiempo[D3,L2]
+                                   0                          -0 
+   147 max_tiempo[D3,L3]
                              -113400                          -0 
-   118 max_tiempo[D3,L4]
+   148 max_tiempo[D3,L4]
                                    0                          -0 
-   119 max_tiempo[D3,L5]
+   149 max_tiempo[D3,L5]
                                    0                          -0 
-   120 max_tiempo[D3,L6]
+   150 max_tiempo[D3,L6]
                                    0                          -0 
-   121 max_tiempo[D4,L1]
+   151 max_tiempo[D4,L1]
                                    0                          -0 
-   122 max_tiempo[D4,L2]
+   152 max_tiempo[D4,L2]
                              -155250                          -0 
-   123 max_tiempo[D4,L3]
+   153 max_tiempo[D4,L3]
                                    0                          -0 
-   124 max_tiempo[D4,L4]
+   154 max_tiempo[D4,L4]
                               -18750                          -0 
-   125 max_tiempo[D4,L5]
+   155 max_tiempo[D4,L5]
                                    0                          -0 
-   126 max_tiempo[D4,L6]
+   156 max_tiempo[D4,L6]
                                    0                          -0 
-   127 max_tiempo[D5,L1]
+   157 max_tiempo[D5,L1]
                                    0                          -0 
-   128 max_tiempo[D5,L2]
+   158 max_tiempo[D5,L2]
                                    0                          -0 
-   129 max_tiempo[D5,L3]
+   159 max_tiempo[D5,L3]
                                    0                          -0 
-   130 max_tiempo[D5,L4]
+   160 max_tiempo[D5,L4]
                                    0                          -0 
-   131 max_tiempo[D5,L5]
+   161 max_tiempo[D5,L5]
                              -137500                          -0 
-   132 max_tiempo[D5,L6]
+   162 max_tiempo[D5,L6]
                                    0                          -0 
-   133 balance_esfuerzo[L1,L2]
-                             38751.5                      100000 
-   134 balance_esfuerzo[L1,L3]
-                             38895.5                      100000 
-   135 balance_esfuerzo[L1,L4]
-                             38751.5                      100000 
-   136 balance_esfuerzo[L1,L5]
-                             38751.5                      100000 
-   137 balance_esfuerzo[L1,L6]
+   163 balance_esfuerzo[L1,L2]
+                               39875                      100000 
+   164 balance_esfuerzo[L1,L3]
+                               40079                      100000 
+   165 balance_esfuerzo[L1,L4]
+                             35118.5                      100000 
+   166 balance_esfuerzo[L1,L5]
+                             40077.5                      100000 
+   167 balance_esfuerzo[L1,L6]
                                    0                      100000 
-   138 balance_esfuerzo[L2,L1]
-                               57499                      100000 
-   139 balance_esfuerzo[L2,L3]
-                             96394.5                      100000 
-   140 balance_esfuerzo[L2,L4]
-                             96250.5                      100000 
-   141 balance_esfuerzo[L2,L5]
-                             96250.5                      100000 
-   142 balance_esfuerzo[L2,L6]
-                               57499                      100000 
-   143 balance_esfuerzo[L3,L1]
-                               57403                      100000 
-   144 balance_esfuerzo[L3,L2]
-                             96154.5                      100000 
-   145 balance_esfuerzo[L3,L4]
-                             96154.5                      100000 
-   146 balance_esfuerzo[L3,L5]
-                             96154.5                      100000 
-   147 balance_esfuerzo[L3,L6]
-                               57403                      100000 
-   148 balance_esfuerzo[L4,L1]
-                               57499                      100000 
-   149 balance_esfuerzo[L4,L2]
-                             96250.5                      100000 
-   150 balance_esfuerzo[L4,L3]
-                             96394.5                      100000 
-   151 balance_esfuerzo[L4,L5]
-                             96250.5                      100000 
-   152 balance_esfuerzo[L4,L6]
-                               57499                      100000 
-   153 balance_esfuerzo[L5,L1]
-                               57499                      100000 
-   154 balance_esfuerzo[L5,L2]
-                             96250.5                      100000 
-   155 balance_esfuerzo[L5,L3]
-                             96394.5                      100000 
-   156 balance_esfuerzo[L5,L4]
-                             96250.5                      100000 
-   157 balance_esfuerzo[L5,L6]
-                               57499                      100000 
-   158 balance_esfuerzo[L6,L1]
+   168 balance_esfuerzo[L2,L1]
+                               56750                      100000 
+   169 balance_esfuerzo[L2,L3]
+                               96829                      100000 
+   170 balance_esfuerzo[L2,L4]
+                             91868.5                      100000 
+   171 balance_esfuerzo[L2,L5]
+                             96827.5                      100000 
+   172 balance_esfuerzo[L2,L6]
+                               56750                      100000 
+   173 balance_esfuerzo[L3,L1]
+                               56614                      100000 
+   174 balance_esfuerzo[L3,L2]
+                               96489                      100000 
+   175 balance_esfuerzo[L3,L4]
+                             91732.5                      100000 
+   176 balance_esfuerzo[L3,L5]
+                             96691.5                      100000 
+   177 balance_esfuerzo[L3,L6]
+                               56614                      100000 
+   178 balance_esfuerzo[L4,L1]
+                               59921                      100000 
+   179 balance_esfuerzo[L4,L2]
+                               99796                      100000 
+   180 balance_esfuerzo[L4,L3]
+                              100000                      100000 
+   181 balance_esfuerzo[L4,L5]
+                             99998.5                      100000 
+   182 balance_esfuerzo[L4,L6]
+                               59921                      100000 
+   183 balance_esfuerzo[L5,L1]
+                               56615                      100000 
+   184 balance_esfuerzo[L5,L2]
+                               96490                      100000 
+   185 balance_esfuerzo[L5,L3]
+                               96694                      100000 
+   186 balance_esfuerzo[L5,L4]
+                             91733.5                      100000 
+   187 balance_esfuerzo[L5,L6]
+                               56615                      100000 
+   188 balance_esfuerzo[L6,L1]
                                    0                      100000 
-   159 balance_esfuerzo[L6,L2]
-                             38751.5                      100000 
-   160 balance_esfuerzo[L6,L3]
-                             38895.5                      100000 
-   161 balance_esfuerzo[L6,L4]
-                             38751.5                      100000 
-   162 balance_esfuerzo[L6,L5]
-                             38751.5                      100000 
-   163 uso_parking[L1]
-                                   0                          -0 
-   164 uso_parking[L2]
-                              -49998                          -0 
-   165 uso_parking[L3]
-                              -49998                          -0 
-   166 uso_parking[L4]
-                              -49997                          -0 
-   167 uso_parking[L5]
-                              -49998                          -0 
-   168 uso_parking[L6]
-                                   0                          -0 
-   169 uso_parking_min[L1]
-                                   0        -49999               
-   170 uso_parking_min[L2]
-                              -49998        -49999               
-   171 uso_parking_min[L3]
-                              -49998        -49999               
-   172 uso_parking_min[L4]
-                              -49997        -49999               
-   173 uso_parking_min[L5]
-                              -49998        -49999               
-   174 uso_parking_min[L6]
-                                   0        -49999               
+   189 balance_esfuerzo[L6,L2]
+                               39875                      100000 
+   190 balance_esfuerzo[L6,L3]
+                               40079                      100000 
+   191 balance_esfuerzo[L6,L4]
+                             35118.5                      100000 
+   192 balance_esfuerzo[L6,L5]
+                             40077.5                      100000 
+   193 uso_parking[L1]
+                                   0            -0               
+   194 uso_parking[L2]
+                                   0            -0               
+   195 uso_parking[L3]
+                                   1            -0               
+   196 uso_parking[L4]
+                                   2            -0               
+   197 uso_parking[L5]
+                                   1            -0               
+   198 uso_parking[L6]
+                                   0            -0               
+   199 uso_parking_min[L1]
+                                   0            -0               
+   200 uso_parking_min[L2]
+                               49999            -0               
+   201 uso_parking_min[L3]
+                               49998            -0               
+   202 uso_parking_min[L4]
+                               49997            -0               
+   203 uso_parking_min[L5]
+                               49998            -0               
+   204 uso_parking_min[L6]
+                                   0            -0               
 
    No. Column name       Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
@@ -371,7 +431,7 @@ Objective:  total_tiempo_respuesta = 889718 (MINimum)
      6 ambulancias[L2,D1]
                     *              0             0               
      7 ambulancias[L2,D2]
-                    *            749             0               
+                    *              0             0               
      8 ambulancias[L2,D3]
                     *              0             0               
      9 ambulancias[L2,D4]
@@ -381,7 +441,7 @@ Objective:  total_tiempo_respuesta = 889718 (MINimum)
     11 ambulancias[L3,D1]
                     *              0             0               
     12 ambulancias[L3,D2]
-                    *           2003             0               
+                    *           1214             0               
     13 ambulancias[L3,D3]
                     *           5400             0               
     14 ambulancias[L3,D4]
@@ -391,7 +451,7 @@ Objective:  total_tiempo_respuesta = 889718 (MINimum)
     16 ambulancias[L4,D1]
                     *           5000             0               
     17 ambulancias[L4,D2]
-                    *           1749             0               
+                    *           4171             0               
     18 ambulancias[L4,D3]
                     *              0             0               
     19 ambulancias[L4,D4]
@@ -401,7 +461,7 @@ Objective:  total_tiempo_respuesta = 889718 (MINimum)
     21 ambulancias[L5,D1]
                     *              0             0               
     22 ambulancias[L5,D2]
-                    *           1999             0               
+                    *           1115             0               
     23 ambulancias[L5,D3]
                     *              0             0               
     24 ambulancias[L5,D4]
@@ -420,62 +480,62 @@ Objective:  total_tiempo_respuesta = 889718 (MINimum)
                     *              0             0               
     31 ambulancias_binario[L1,D1]
                     *              0             0             1 
-    32 ambulancias_binario[L2,D1]
+    32 ambulancias_binario[L1,D2]
                     *              0             0             1 
-    33 ambulancias_binario[L3,D1]
+    33 ambulancias_binario[L1,D3]
                     *              0             0             1 
-    34 ambulancias_binario[L4,D1]
+    34 ambulancias_binario[L1,D4]
+                    *              0             0             1 
+    35 ambulancias_binario[L1,D5]
+                    *              0             0             1 
+    36 ambulancias_binario[L2,D1]
+                    *              0             0             1 
+    37 ambulancias_binario[L2,D2]
+                    *              0             0             1 
+    38 ambulancias_binario[L2,D3]
+                    *              0             0             1 
+    39 ambulancias_binario[L2,D4]
                     *              1             0             1 
-    35 ambulancias_binario[L5,D1]
+    40 ambulancias_binario[L2,D5]
                     *              0             0             1 
-    36 ambulancias_binario[L6,D1]
+    41 ambulancias_binario[L3,D1]
                     *              0             0             1 
-    37 ambulancias_binario[L1,D2]
-                    *              0             0             1 
-    38 ambulancias_binario[L2,D2]
+    42 ambulancias_binario[L3,D2]
                     *              1             0             1 
-    39 ambulancias_binario[L3,D2]
+    43 ambulancias_binario[L3,D3]
                     *              1             0             1 
-    40 ambulancias_binario[L4,D2]
+    44 ambulancias_binario[L3,D4]
+                    *              0             0             1 
+    45 ambulancias_binario[L3,D5]
+                    *              0             0             1 
+    46 ambulancias_binario[L4,D1]
                     *              1             0             1 
-    41 ambulancias_binario[L5,D2]
+    47 ambulancias_binario[L4,D2]
                     *              1             0             1 
-    42 ambulancias_binario[L6,D2]
+    48 ambulancias_binario[L4,D3]
                     *              0             0             1 
-    43 ambulancias_binario[L1,D3]
-                    *              0             0             1 
-    44 ambulancias_binario[L2,D3]
-                    *              0             0             1 
-    45 ambulancias_binario[L3,D3]
+    49 ambulancias_binario[L4,D4]
                     *              1             0             1 
-    46 ambulancias_binario[L4,D3]
+    50 ambulancias_binario[L4,D5]
                     *              0             0             1 
-    47 ambulancias_binario[L5,D3]
+    51 ambulancias_binario[L5,D1]
                     *              0             0             1 
-    48 ambulancias_binario[L6,D3]
-                    *              0             0             1 
-    49 ambulancias_binario[L1,D4]
-                    *              0             0             1 
-    50 ambulancias_binario[L2,D4]
+    52 ambulancias_binario[L5,D2]
                     *              1             0             1 
-    51 ambulancias_binario[L3,D4]
+    53 ambulancias_binario[L5,D3]
                     *              0             0             1 
-    52 ambulancias_binario[L4,D4]
+    54 ambulancias_binario[L5,D4]
+                    *              0             0             1 
+    55 ambulancias_binario[L5,D5]
                     *              1             0             1 
-    53 ambulancias_binario[L5,D4]
+    56 ambulancias_binario[L6,D1]
                     *              0             0             1 
-    54 ambulancias_binario[L6,D4]
+    57 ambulancias_binario[L6,D2]
                     *              0             0             1 
-    55 ambulancias_binario[L1,D5]
+    58 ambulancias_binario[L6,D3]
                     *              0             0             1 
-    56 ambulancias_binario[L2,D5]
+    59 ambulancias_binario[L6,D4]
                     *              0             0             1 
-    57 ambulancias_binario[L3,D5]
-                    *              0             0             1 
-    58 ambulancias_binario[L4,D5]
-                    *              0             0             1 
-    59 ambulancias_binario[L5,D5]
-                    *              1             0             1 
     60 ambulancias_binario[L6,D5]
                     *              0             0             1 
     61 parkings_posibles[L4]

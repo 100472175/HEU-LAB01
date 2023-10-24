@@ -47,5 +47,4 @@ param max_tiempo_respuesta := 35;
 
 param M := 50000;
 
-
 end;
