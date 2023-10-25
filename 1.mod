@@ -37,7 +37,7 @@ minimize total_tiempo_respuesta: sum {p in PARKINGS, d in DISTRICTS} tiempo_resp
 s.t. total_llamadas_en_distrito{d in DISTRICTS}: sum {p in PARKINGS} ambulancias[p,d] = llamadas_por_distrito[d];
 
 # No puede haber más de 10_000*0.75 llamadas en cada parking
-s.t. max_llamadas{p in PARKINGS,d in DISTRICTS}: ambulancias[p, d] <= max_reparticiones - 1;
+s.t. max_llamadas{p in PARKINGS, d in DISTRICTS}: ambulancias[p, d] <= max_reparticiones - 1;
 
 # No puede haber más de 10_000 llamadas en cada parking
 s.t. max_llamadas_10k{p in PARKINGS}: sum {d in DISTRICTS} ambulancias[p, d] <= max_llamadas_parking;
