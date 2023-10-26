@@ -1,0 +1,38 @@
+#
+# Práctica 1: Programación Lineal - Heurística y Optimización
+#
+# Parte 1: Modelo Simple
+#
+# Eduardo Alarcón & Enrique Alcocer
+#
+
+data;
+# Datos para el problema de asignación de ambulancias
+
+# Conjunto de distritos
+set DISTRICTS := D1 D2 D3 D4 D5;
+
+# Conjunto de parkings
+set PARKINGS := L1 L2 L3;
+
+# Número de llamadas desde cada distrito
+param llamadas_por_distrito :=
+    D1 5000
+    D2 6500
+    D3 5400
+    D4 7500
+    D5 5500;
+
+# Tiempo de respuesta por ambulancia
+param tiempo_respuesta:  D1      D2      D3      D4      D5:= 
+                L1       20      30      50      15      32
+                L2       15      18      30      12      15
+                L3       34      20      14      30      18;
+
+# Máximo número de llamadas por parking
+param max_llamadas_parking := 10000;
+
+# Máximo tiempo de respuesta
+param max_tiempo_respuesta := 35;
+
+end;
